@@ -29,9 +29,21 @@ function init(){
 
 // ================================================================>
 function enregistrer(){
-    let nom      = document.querySelector("#nom").value
+    let name      = document.querySelector("#nom").value
     let descript = document.querySelector("#description").value
     let lien     = document.querySelector("#lien").value
+
+    let Bugs_init = init()
+    let bug = {
+        nom  : name,
+        desc : descript,
+        link : lien
+    }
+    Bugs_init.bugs.push(bug)
+    
+    localStorage.setItem("bugtracker", JSON.stringify(Bugs_init))
+
+    alert("Enregistrement reussi")
 
     
 }
