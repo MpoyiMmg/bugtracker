@@ -14,8 +14,24 @@ function login(){
 }
 
 // ================================================================>
+function init(){
+    let Bugs_init = {
+        bugs : []
+    }
+
+    if(localStorage.getItem("bugtracker") === null){
+        localStorage.setItem("bugtracker", JSON.stringify(Bugs_init))
+    }
+    bug_parse = JSON.parse(localStorage.getItem("bugtracker"))
+
+    return bug_parse
+}
+
+// ================================================================>
 function enregistrer(){
     let nom      = document.querySelector("#nom").value
     let descript = document.querySelector("#description").value
     let lien     = document.querySelector("#lien").value
+
+    
 }
