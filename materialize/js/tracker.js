@@ -43,6 +43,10 @@ function enregistrer(){
     
     localStorage.setItem("bugtracker", JSON.stringify(Bugs_init))
 
+    document.querySelector("#nom").value = ""
+    document.querySelector("#description").value = ""
+    document.querySelector("#lien").value = ""
+
     alert("Enregistrement reussi")
 
     
