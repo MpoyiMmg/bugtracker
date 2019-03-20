@@ -50,3 +50,28 @@ function enregistrer(){
     alert("Enregistrement reussi")
 }
 // ===================================================================>
+
+function show(){
+    bugs_tracker = init()
+    liste = document.querySelector("#bug_list")
+    bugs_tracker.bugs.forEach(bug =>{
+        liste.innerHTML += display(bug)
+    })
+}
+
+function display(bug){
+    `
+		<div class="collection-item avatar col s10 card offset-s1" >
+			<div class="row"></div>
+    <div class="row">
+        <div class="col s4">
+            <span class="title"> ${bug.name} </span>
+            <p> ${bug.lien} <br>
+
+            </p>
+        </div>
+    </div>
+    </div>
+</div>
+    `
+}
