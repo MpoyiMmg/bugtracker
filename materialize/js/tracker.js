@@ -48,6 +48,5 @@ function enregistrer(){
     document.querySelector("#lien").value = ""
 
     alert("Enregistrement reussi")
-
-    
 }
+// ===================================================================>
