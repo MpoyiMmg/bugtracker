@@ -57,7 +57,7 @@ function enregistrer(){
 
     alert("Enregistrement reussi")
 }
-// ====================================================================>
+// =====================================================================>
 
 function show(){
     bugs_tracker = init()
@@ -71,9 +71,11 @@ function show(){
 function lister(){
     // alert(localStorage.getItem("bugtracker"))
     M.toast({
-        html: localStorage.getItem("bugtracker") 
+        html: localStorage.getItem("bugtracker")
     })
 
+}
+// ====================================================================>
 function display(bug){
    return `
 		<div class="collection-item avatar col s10 card offset-s1" >
