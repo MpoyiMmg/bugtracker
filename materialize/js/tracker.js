@@ -30,7 +30,6 @@ function init(){
 // ==================================================================>
 function enregistrer(){
 
-    alert(localStorage.getItem("bugtracker"))
     let name      = document.querySelector("#nom").value
     let descript = document.querySelector("#description").value
     let lien     = document.querySelector("#lien").value
@@ -68,6 +67,12 @@ function show(){
     })
 }
 // =====================================================================>
+
+function lister(){
+    // alert(localStorage.getItem("bugtracker"))
+    M.toast({
+        html: localStorage.getItem("bugtracker") 
+    })
 
 function display(bug){
    return `
