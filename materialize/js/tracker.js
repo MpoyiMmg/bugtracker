@@ -69,10 +69,12 @@ function show(){
 // =====================================================================>
 
 function lister(){
-    // alert(localStorage.getItem("bugtracker"))
+    bugstr = init()
+
     M.toast({
-        html: localStorage.getItem("bugtracker")
+        html: bugstr.bugs.nom
     })
+    
 
 }
 // ====================================================================>
@@ -80,13 +82,12 @@ function display(bug){
    return `
 		<div class="collection-item avatar col s10 card offset-s1" >
 			<div class="row"></div>
-    <div class="row">
-        <div class="col s4">
-            <span class="title"> ${bug.nom} </span>
-            <p> ${bug.link} <br></p>
+            <div class="row">
+                <div class="col s4">
+                    <span class="title"> ${bug.nom} </span>
+                    <p> ${bug.link} <br></p>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-    </div>
     `
 }
